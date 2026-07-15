@@ -1,5 +1,0 @@
-2026-07-15 15:16:11 [main] INFO  TestListener - Test suite started: Surefire test
-2026-07-15 15:16:12 [main] WARN  Utils - The test method 'io.cucumber.testng.AbstractTestNGCucumberTests.runScenario' will be skipped since its data provider 'scenarios' returned an empty array or iterator. 
-2026-07-15 15:16:12 [main] WARN  Utils - The test method 'io.cucumber.testng.AbstractTestNGCucumberTests.runScenario' will be skipped since its data provider 'scenarios' returned an empty array or iterator. 
-2026-07-15 15:16:12 [main] INFO  TestListener - Test suite finished: Surefire test
-2026-07-15 15:16:12 [main] INFO  TestListener - Final ExtentReport flush completed.

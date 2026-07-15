@@ -6,17 +6,17 @@ A Hybrid Test Automation Framework built with **Java**, **Cucumber BDD**, **Sele
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Language | Java 17 |
-| BDD Framework | Cucumber 7 (Gherkin) |
-| UI Automation | Selenium 4 + WebDriverManager |
-| API Automation | RestAssured 5 |
-| Test Runner | TestNG 7 |
-| Reporting | ExtentReports 5 (HTML) |
-| Build Tool | Maven |
-| DI Container | PicoContainer |
-| Logging | Log4j2 + SLF4J |
+| Layer | Technology                                |
+|---|--------------------------------------------|
+| Language | Java 21 (LTS)                              |
+| BDD Framework | Cucumber 7.34.4 (Gherkin)                  |
+| UI Automation | Selenium 4.46 + WebDriverManager 6.3.4     |
+| API Automation | RestAssured 5.5.7                          |
+| Test Runner | TestNG 7.12.0                               |
+| Reporting | ExtentReports 5.1.2 (HTML)                 |
+| Build Tool | Maven 3.9.16                                |
+| DI Container | PicoContainer                              |
+| Logging | Log4j2 2.25.4 + SLF4J 2.0.16                |
 
 ---
 
@@ -143,8 +143,8 @@ CucumberFramework/
 
 | Tool | Version | Download |
 |---|---|---|
-| Java JDK | 17+ | [Download](https://www.oracle.com/java/technologies/downloads/) |
-| Maven | 3.8+ | [Download](https://maven.apache.org/download.cgi) |
+| Java JDK | 21 (LTS) | [Download](https://www.oracle.com/java/technologies/downloads/) |
+| Maven | 3.9.16 | [Download](https://maven.apache.org/download.cgi) |
 | Chrome Browser | Latest | Default browser |
 | IntelliJ IDEA | Any | [Download](https://www.jetbrains.com/idea/download/) |
 | Git | Any | [Download](https://git-scm.com/download/win) |
@@ -191,24 +191,6 @@ SerialNo=SN-SEED001
 ---
 
 ## Running Tests
-
-### Run API tests only (no browser)
-
-```bash
-mvn test -Papi
-```
-
-### Run UI tests only (browser opens)
-
-```bash
-mvn test -Pui
-```
-
-### Run all tests
-
-```bash
-mvn test -Pall
-```
 
 ### Run by tag from command line
 
