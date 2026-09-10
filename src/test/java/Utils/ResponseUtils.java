@@ -20,19 +20,19 @@ public class ResponseUtils {
             String actualValue = context.previousResponse.jsonPath().getString(locator);
             if (expectedValue.equals("#should be present")) {
                 Assert.assertNotNull(
-                    actualValue,
-                    "Validation failed for JSON path : " + locator + " | Value is not present"
+                        actualValue,
+                        "Validation failed for JSON path : " + locator + " | Value is not present"
+                );
+            } else if (expectedValue.equalsIgnoreCase("null")) {
+                Assert.assertNull(
+                        actualValue,
+                        "Validation failed for JSON path : " + locator + " | Expected : null | Actual : " + actualValue
                 );
             } else {
-                Assert.assertEquals(
-                    actualValue,
-                    expectedValue,
-                    "Validation failed for JSON path : " + locator + " | Expected : " + expectedValue + " | Actual : " + actualValue
-                );
+                Assert.assertEquals(actualValue, expectedValue, "Validation failed for JSON path : " + locator + " | Expected : " + expectedValue + " | Actual : " + actualValue);
             }
         }
     }
-
     public static void storeVariablesValueFromResponse(TestContext context, DataTable table) {
         List<Map<String, String>> data = table.asMaps(String.class, String.class);
         for (Map<String, String> row : data) {

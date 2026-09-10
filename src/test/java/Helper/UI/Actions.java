@@ -1,34 +1,25 @@
 package Helper.UI;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Utils.ExtentReportManager;
 import Utils.LoggerUtils;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 import static org.testng.Assert.*;
 
-public class UiHelper {
+public class Actions {
 
     private WebDriver driver;
     private WebDriverWait wait;
 
-    public UiHelper(WebDriver driver) {
+    public Actions(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
@@ -36,6 +27,51 @@ public class UiHelper {
     public void click(By locator) {
         WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
         element.click();
+    }
+    public void clickUsingJS(By locator) {
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+    }
+
+    public void ssertCaseUpdatedSuccessMessage() {
+        try {
+            WebElement successMsg = wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(
+                            By.xpath("//div[contains(@class,'alert-success') and contains(normalize-space(.), 'updated successfully')]")
+                    )
+            );
+            String actualText = successMsg.getText().trim();
+            Assert.assertTrue(
+                    actualText.contains("VAT Invoice Case Ref No") && actualText.contains("updated successfully"),
+                    "Success message did not match expected format. Actual: " + actualText
+            );
+            String message = "✓ Success message verified: " + actualText;
+            LoggerUtils.logInfo(message);
+            ExtentReportManager.logPass(message);
+        } catch (Exception e) {
+            String errorMessage = "✗ Case updated success message was not displayed - " + e.getMessage();
+            LoggerUtils.logInfo(errorMessage);
+            captureScreenshotOnFailure("Case Updated Success Message");
+            ExtentReportManager.logFail(errorMessage);
+            fail(errorMessage);
+        }
+    }
+
+    public void clickVisibleCloseButtonUsingJS() {
+        List<WebElement> closeButtons = driver.findElements(
+                By.xpath("//button[@aria-label='Close' and @data-dismiss]")
+        );
+
+        for (WebElement element : closeButtons) {
+            if (element.isDisplayed()) {
+                ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+                return;
+            }
+        }
+
+        throw new NoSuchElementException("No visible Close button found on the page");
     }
     public void enterText(By locator, String value) {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -48,7 +84,7 @@ public class UiHelper {
                     ExpectedConditions.visibilityOfElementLocated(locator));
             element.clear();
 
-            Actions actions = new Actions(driver);
+            org.openqa.selenium.interactions.Actions actions = new org.openqa.selenium.interactions.Actions(driver);
             for (char c : value.toCharArray()) {
                 actions.sendKeys(element, String.valueOf(c))
                         .pause(Duration.ofMillis(50))   // ← getShortWait() equivalent
@@ -80,7 +116,6 @@ public class UiHelper {
 
     public void selectDropdownByValue(By locator, String value) {
         Select select = new Select(wait.until(ExpectedConditions.visibilityOfElementLocated(locator)));
-
         select.selectByValue(value);
     }
 
@@ -108,7 +143,7 @@ public class UiHelper {
     }
 
     public void hover(By locator) {
-        Actions actions = new Actions(driver);
+        org.openqa.selenium.interactions.Actions actions = new org.openqa.selenium.interactions.Actions(driver);
         actions.moveToElement(wait.until(ExpectedConditions.visibilityOfElementLocated(locator))).perform();
     }
 
@@ -200,7 +235,7 @@ public class UiHelper {
         try {
             boolean isDisplayed = isDisplayed(locator);
             assertTrue(isDisplayed, elementName + " is not displayed on the page");
-            String message = "✓ " + elementName + " is successfully displayed";
+            String message = "✓ " + elementName + "Message displayed";
             LoggerUtils.logInfo(message);
             ExtentReportManager.logPass(message);
         } catch (Exception e) {
@@ -487,12 +522,10 @@ public class UiHelper {
             // Build full absolute path
             String absolutePath = System.getProperty("user.dir")
                     + "\\src\\test\\resources\\TestFiles\\" + filePath;
-
             WebElement fileInput = driver.findElement(locator);
             fileInput.sendKeys(absolutePath);
-
-            LoggerUtils.logInfo("✓ File uploaded: " + absolutePath);
-            ExtentReportManager.logPass("✓ File uploaded: " + absolutePath);
+            LoggerUtils.logInfo("✓ File uploaded Successfully");
+            ExtentReportManager.logPass("✓ File uploaded Successfully");
         } catch (Exception e) {
             LoggerUtils.logInfo("✗ File upload failed: " + e.getMessage());
             captureScreenshotOnFailure("File Upload Failed");

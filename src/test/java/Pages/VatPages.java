@@ -2,7 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 
-public class Pages {
+public class VatPages {
 
     // ========== Test LOGIN FORM LOCATORS ==========
     public static By USERNAME_FIELD = By.id("username");

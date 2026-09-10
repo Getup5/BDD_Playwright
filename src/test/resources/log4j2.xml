@@ -5,7 +5,7 @@
         <!-- Timestamp format for log files -->
         <Property name="log.timestamp">${date:yyyy-MM-dd_HH-mm-ss}</Property>
         <Property name="log.pattern">%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1} - %m%n</Property>
-        <Property name="logs.dir">logs/classes</Property>
+        <Property name="logs.dir">logs/loggers</Property>
     </Properties>
 
     <Appenders>

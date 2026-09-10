@@ -49,7 +49,9 @@ public class APISteps {
             case "AuthToken":
                 response = apiHelper.postAPI(ConfigReader.getProperty("authEndpoint"), requestJson);
                 break;
-
+            case "CreateVatLoginEndpoint":
+                response = apiHelper.postAPI(ConfigReader.getProperty("CreateVatLoginEndpoint"), requestJson);
+                break;
             default:
                 throw new RuntimeException("POST API NOT FOUND");
         }

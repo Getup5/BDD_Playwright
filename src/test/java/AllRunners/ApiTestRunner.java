@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/Features/API",
-        glue = "StepDefinitions.api",
+        glue = "StepDefinitions.API",
         tags = "(@Positive or @Negative) and not @WIP",
         objectFactory = io.cucumber.picocontainer.PicoFactory.class,
         plugin = {
