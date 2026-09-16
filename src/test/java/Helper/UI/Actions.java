@@ -34,7 +34,7 @@ public class Actions {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
     }
 
-    public void ssertCaseUpdatedSuccessMessage() {
+    public void assertCaseUpdatedSuccessMessage() {
         try {
             WebElement successMsg = wait.until(
                     ExpectedConditions.visibilityOfElementLocated(
@@ -235,7 +235,7 @@ public class Actions {
         try {
             boolean isDisplayed = isDisplayed(locator);
             assertTrue(isDisplayed, elementName + " is not displayed on the page");
-            String message = "✓ " + elementName + "Message displayed";
+            String message = "✓ " + elementName + " Message displayed";
             LoggerUtils.logInfo(message);
             ExtentReportManager.logPass(message);
         } catch (Exception e) {

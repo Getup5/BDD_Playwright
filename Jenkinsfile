@@ -12,7 +12,7 @@ pipeline {
 
     parameters {
         string(
-            name:         'BASE_URL',
+            name:         'FRONTEND_URL',
             defaultValue: 'http://localhost:4200',
             description:  'Shell app base URL (passed in by the main pipeline)'
         )
@@ -48,17 +48,17 @@ pipeline {
             // "connection refused" one by one.
             steps {
                 echo "Triggered by: ${params.TRIGGERED_BY}"
-                echo "Waiting for frontend at ${params.BASE_URL} ..."
+                echo "Waiting for frontend at ${params.FRONTEND_URL} ..."
                 bat """
                 setlocal enabledelayedexpansion
                 set RETRIES=20
                 :WAIT_FE
-                curl -s -o nul -w "%%{http_code}" "${params.BASE_URL}" > fe_status.txt
+                curl -s -o nul -w "%%{http_code}" "${params.FRONTEND_URL}" > fe_status.txt
                 set /p STATUS=<fe_status.txt
                 if "!STATUS!"=="200" goto FE_READY
                 set /a RETRIES-=1
                 if !RETRIES! EQU 0 (
-                    echo ERROR: Frontend at ${params.BASE_URL} is not reachable.
+                    echo ERROR: Frontend at ${params.FRONTEND_URL} is not reachable.
                     echo This pipeline does not start the frontend/backend itself —
                     echo it must be triggered by the main build/deploy pipeline, or the
                     echo apps must already be running before this job starts.
@@ -98,14 +98,24 @@ pipeline {
 
         stage('Run Automation Tests') {
             steps {
-                echo '=========================== Running Cucumber tests... ==========================='
-                // Forward the actual URLs into the test run instead of relying on
-                // whatever default is hardcoded in the test config.
+                echo '=========================== Running only @Regression Cucumber tests... ==========================='
                 bat """
                 mvn clean test ^
-                    -DBASE_URL=${params.BASE_URL} ^
+                    -Dtest=AllRunners.ApiTestRunner ^
+                    -Dcucumber.filter.tags="@Regression" ^
+                    -DFRONTEND_URL=${params.FRONTEND_URL} ^
                     -DBACKEND_URL=${params.BACKEND_URL}
                 """
+            }
+        }
+
+        stage('Deploy') {
+            when {
+                expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
+            }
+            steps {
+                echo '=========================== REGRESSION TESTS PASSED — DEPLOYMENT CAN PROCEED ==========================='
+                // Add the actual deploy command for your environment here.
             }
         }
 

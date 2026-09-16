@@ -46,7 +46,6 @@ public class Hooks {
         }
         WebDriverManagerUtil.quitDriver();
         LoggerUtils.logInfo("Browser closed");
-        ExtentReportManager.flushReport();
         ExtentReportManager.cleanup();
     }
 }

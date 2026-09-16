@@ -59,8 +59,7 @@ public class Hooks {
 
         LoggerUtils.logInfo("API Test cleanup completed");
 
-        // Flush and cleanup
-        ExtentReportManager.flushReport();
+        // Flush is handled once at suite end to avoid overwriting the HTML report on every scenario.
         ExtentReportManager.cleanup();
         LoggerUtils.clearContext();  // Clear MDC context
     }

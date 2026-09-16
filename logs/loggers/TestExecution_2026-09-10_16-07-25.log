@@ -1,0 +1,21 @@
+2026-09-10 16:07:25 [main] INFO  Hooks - ========== UI Test Started: Verify VAT user is able to create New Case without Uploading Files in TAX Invoice Delivery ==========
+2026-09-10 16:07:25 [main] INFO  ExtentReportManager - ExtentReport initialized at: logs/reports/ExtentReport_10-09-2026_16-07-25.html
+2026-09-10 16:07:25 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify VAT user is able to create New Case without Uploading Files in TAX Invoice Delivery
+2026-09-10 16:07:25 [main] INFO  ExtentReportManager - Test Started
+2026-09-10 16:07:26 [main] INFO  WebDriverManager - Using chromedriver 152.0.7977.82 (resolved driver for Chrome 152)
+2026-09-10 16:07:26 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\V00450\.cache\selenium\chromedriver\win64\152.0.7977.82\chromedriver.exe
+2026-09-10 16:07:27 [main] INFO  WebDriverManagerUtil - Browser initialized: chrome
+2026-09-10 16:07:27 [main] INFO  Hooks - Browser initialized
+2026-09-10 16:07:27 [main] INFO  ExtentReportManager - ✓ Browser initialized successfully
+2026-09-10 16:07:30 [main] INFO  WebDriverManagerUtil - Navigated to: http://localhost:4200
+2026-09-10 16:07:30 [main] INFO  VatStepdef - Navigated to VAT Portal
+2026-09-10 16:07:30 [main] INFO  VatStepdef - User Clicked on Create New Case+ link
+2026-09-10 16:07:30 [main] INFO  VatStepdef - User Selected VAT Country
+2026-09-10 16:07:31 [main] INFO  VatStepdef - User Entered VAT Number
+2026-09-10 16:07:31 [main] INFO  VatStepdef - User Clicked on Search button
+2026-09-10 16:07:31 [main] INFO  Actions - ✓ Please select file Message displayed
+2026-09-10 16:07:31 [main] INFO  ExtentReportManager - ✓ ✓ Please select file Message displayed
+2026-09-10 16:07:46 [main] INFO  Hooks - ========== UI Test Finished: Verify VAT user is able to create New Case without Uploading Files in TAX Invoice Delivery ==========
+2026-09-10 16:07:46 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify VAT user is able to create New Case without Uploading Files in TAX Invoice Delivery
+2026-09-10 16:07:47 [main] INFO  WebDriverManagerUtil - Browser closed and ThreadLocal cleared.
+2026-09-10 16:07:47 [main] INFO  Hooks - Browser closed

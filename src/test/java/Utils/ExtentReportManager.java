@@ -4,14 +4,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/**
- * ExtentReportManager — Fixed version.
- * Handles ExtentReport integration with HTML reporting.
- */
 public class ExtentReportManager {
 
     private static ExtentReports extentReports;
@@ -40,6 +35,7 @@ public class ExtentReportManager {
             extentReports.setSystemInfo("OS",           System.getProperty("os.name"));
             extentReports.setSystemInfo("Java Version", System.getProperty("java.version"));
             extentReports.setSystemInfo("User Name",    System.getProperty("user.name"));
+            extentReports.setSystemInfo("User country ", System.getProperty("user.country"));
 
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 if (extentReports != null) {
@@ -51,8 +47,6 @@ public class ExtentReportManager {
         }
     }
 
-    // ── Test lifecycle ────────────────────────────────────────────────────────
-
     public static void createTest(String testName, String description) {
         if (extentReports == null) initializeExtentReports();
         ExtentTest test = extentReports.createTest(testName, description);
@@ -63,8 +57,6 @@ public class ExtentReportManager {
     public static ExtentTest getTest() {
         return extentTest.get();
     }
-
-    // ── Logging helpers ───────────────────────────────────────────────────────
 
     public static void logInfo(String message) {
         if (getTest() != null) getTest().info(message);
@@ -93,11 +85,6 @@ public class ExtentReportManager {
 
     // ── Flush — MUST be called from Cucumber @After hook ─────────────────────
 
-    /**
-     * Flush writes the report HTML to disk.
-     * Called from BOTH Hooks classes @After method after every scenario.
-     * Without this call the target/reports folder stays empty.
-     */
     public static synchronized void flushReport() {
         if (extentReports != null) {
             extentReports.flush();

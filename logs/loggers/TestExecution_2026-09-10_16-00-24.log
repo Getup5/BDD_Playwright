@@ -1,0 +1,26 @@
+2026-09-10 16:00:24 [main] INFO  Hooks - ========== UI Test Started: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance ==========
+2026-09-10 16:00:25 [main] INFO  ExtentReportManager - ExtentReport initialized at: logs/reports/ExtentReport_10-09-2026_16-00-24.html
+2026-09-10 16:00:25 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance
+2026-09-10 16:00:25 [main] INFO  ExtentReportManager - Test Started
+2026-09-10 16:00:25 [main] INFO  WebDriverManager - Using chromedriver 152.0.7977.82 (resolved driver for Chrome 152)
+2026-09-10 16:00:25 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\V00450\.cache\selenium\chromedriver\win64\152.0.7977.82\chromedriver.exe
+2026-09-10 16:00:26 [main] INFO  WebDriverManagerUtil - Browser initialized: chrome
+2026-09-10 16:00:26 [main] INFO  Hooks - Browser initialized
+2026-09-10 16:00:26 [main] INFO  ExtentReportManager - ✓ Browser initialized successfully
+2026-09-10 16:00:29 [main] INFO  WebDriverManagerUtil - Navigated to: http://localhost:4200
+2026-09-10 16:00:29 [main] INFO  VatStepdef - Navigated to VAT Portal
+2026-09-10 16:00:29 [main] INFO  VatStepdef - User Clicked on Create New Case+ link
+2026-09-10 16:00:29 [main] INFO  VatStepdef - User Selected VAT Country
+2026-09-10 16:00:29 [main] INFO  VatStepdef - User Entered VAT Number
+2026-09-10 16:00:30 [main] INFO  VatStepdef - User Clicked on Search button
+2026-09-10 16:00:30 [main] INFO  Actions - ✓ File uploaded Successfully
+2026-09-10 16:00:30 [main] INFO  ExtentReportManager - ✓ ✓ File uploaded Successfully
+2026-09-10 16:00:30 [main] INFO  Actions - ✓ File uploaded successfully Message displayed
+2026-09-10 16:00:30 [main] INFO  ExtentReportManager - ✓ ✓ File uploaded successfully Message displayed
+2026-09-10 16:00:30 [main] INFO  Actions - ✓ Success message verified: VAT Invoice Case Ref No : CASE-004 updated successfully
+2026-09-10 16:00:30 [main] INFO  ExtentReportManager - ✓ ✓ Success message verified: VAT Invoice Case Ref No : CASE-004 updated successfully
+2026-09-10 16:00:30 [main] INFO  VatStepdef - User is able to view the confirmation message after submitting the create new case
+2026-09-10 16:00:30 [main] INFO  Hooks - ========== UI Test Finished: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance ==========
+2026-09-10 16:00:30 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance
+2026-09-10 16:00:31 [main] INFO  WebDriverManagerUtil - Browser closed and ThreadLocal cleared.
+2026-09-10 16:00:31 [main] INFO  Hooks - Browser closed

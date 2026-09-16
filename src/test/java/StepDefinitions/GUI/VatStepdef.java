@@ -5,7 +5,9 @@ import Helper.UI.Actions;
 import Utils.ConfigReader;
 import Utils.LoggerUtils;
 import Utils.WebDriverManagerUtil;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -51,7 +53,6 @@ public class VatStepdef {
         LoggerUtils.logInfo("User Entered VAT Number");
         Actions.click(By.xpath("//input[@type='submit' and @value='Search']"));
         LoggerUtils.logInfo("User Clicked on Search button");
-        Actions.waitInSeconds(15);
         Actions.enterText(By.id("primaryEmail"), "Surya@gmail.com");
         Actions.enterText(By.id("secondaryEmail1"), "Surya@verinite.com");
         Actions.selectDropdownByValue(By.id("mRMUser"), "checkeruser2");
@@ -66,7 +67,79 @@ public class VatStepdef {
         Actions.clickUsingJS(By.xpath("//div[@class='secondaryemailmargin']//a[normalize-space(text())='Email Linkage Details']"));
         Actions.clickVisibleCloseButtonUsingJS();
         Actions.clickUsingJS(By.xpath("//input[@type='submit' and @value='Submit']"));
-//        Actions.assertCaseUpdatedSuccessMessage();
-        Actions.waitInSeconds(10);
+    }
+
+    @Then("Verify the VAT user is able to view the confirmation message after submitting the create new case")
+    public void verifyConfirmationMessage() {
+        Actions.assertCaseUpdatedSuccessMessage();
+        LoggerUtils.logInfo("User is able to view the confirmation message after submitting the create new case");
+    }
+
+    @When("Verify the VAT user is able to submit without Clicking Current Delivery Details fields in the create new case form")
+    public void iEnterRequiredFieldsWithoutCurrentDeliveryDetails() {
+        Actions.selectDropdownByValue(By.id("vatCountry"), "BH");
+        LoggerUtils.logInfo("User Selected VAT Country");
+        Actions.enterText(By.id("vatNo"), "VAT-100001");
+        LoggerUtils.logInfo("User Entered VAT Number");
+        Actions.click(By.xpath("//input[@type='submit' and @value='Search']"));
+        LoggerUtils.logInfo("User Clicked on Search button");
+        Actions.clickUsingJS(By.xpath("//input[@type='submit' and @value='Submit']"));
+        Actions.assertElementDisplayed(By.xpath("//div[contains(@class, 'text-danger') and contains(normalize-space(.), 'Current Delivery Details Must be Clicked')]"), "Current Delivery Details Must be Clicked");
+        LoggerUtils.logInfo("User is able to view the error message for Current Delivery Details fields in the create new case form");
+    }
+
+    @When("Verify the VAT user is able to submit without Clicking Primary Email Linkage Details fields in the create new case form")
+    public void iEnterRequiredFieldsWithoutPrimaryEmailLinkageDetails() {
+        Actions.selectDropdownByValue(By.id("vatCountry"), "BH");
+        LoggerUtils.logInfo("User Selected VAT Country");
+        Actions.enterText(By.id("vatNo"), "VAT-100001");
+        LoggerUtils.logInfo("User Entered VAT Number");
+        Actions.click(By.xpath("//input[@type='submit' and @value='Search']"));
+        LoggerUtils.logInfo("User Clicked on Search button");
+        Actions.clickUsingJS(By.xpath("//a[normalize-space(text())='Current Delivery Details']"));
+        Actions.clickVisibleCloseButtonUsingJS();
+        Actions.clickUsingJS(By.xpath("//input[@type='submit' and @value='Submit']"));
+        Actions.assertElementDisplayed(By.xpath("//div[contains(@class, 'text-danger') and contains(normalize-space(.), 'Email Linkage Details Must be Clicked')]"), "Email Linkage Details Must be Clicked");
+        LoggerUtils.logInfo("User is able to view the error message for Primary Email Linkage Details fields in the create new case form");
+    }
+
+    @When("Verify the VAT user is able to submit without Clicking Secondary Email Linkage Details fields in the create new case form")
+    public void iEnterRequiredFieldsWithoutSecondaryEmailLinkageDetails() {
+        Actions.selectDropdownByValue(By.id("vatCountry"), "BH");
+        LoggerUtils.logInfo("User Selected VAT Country");
+        Actions.enterText(By.id("vatNo"), "VAT-100001");
+        LoggerUtils.logInfo("User Entered VAT Number");
+        Actions.click(By.xpath("//input[@type='submit' and @value='Search']"));
+        LoggerUtils.logInfo("User Clicked on Search button");
+        Actions.clickUsingJS(By.xpath("//a[normalize-space(text())='Current Delivery Details']"));
+        Actions.clickVisibleCloseButtonUsingJS();
+        Actions.clickUsingJS(By.xpath("//div[@class='pemailmargin']//a[normalize-space(text())='Email Linkage Details']"));
+        Actions.clickVisibleCloseButtonUsingJS();
+        Actions.clickUsingJS(By.xpath("//input[@type='submit' and @value='Submit']"));
+        Actions.assertElementDisplayed(By.xpath("//div[contains(@class, 'text-danger') and contains(normalize-space(.), 'Email Linkage Details Must be Clicked')]"), "Email Linkage Details Must be Clicked");
+        LoggerUtils.logInfo("User is able to view the error message for Secondary Email Linkage Details fields in the create new case form");
+    }
+
+    @Then("Verify the VAT user is able to submit without Uploading Files in the create new case form")
+    public void iEnterRequiredFieldsWithoutUploadingFiles() {
+        Actions.selectDropdownByValue(By.id("vatCountry"), "BH");
+        LoggerUtils.logInfo("User Selected VAT Country");
+        Actions.enterText(By.id("vatNo"), "VAT-100001");
+        LoggerUtils.logInfo("User Entered VAT Number");
+        Actions.click(By.xpath("//input[@type='submit' and @value='Search']"));
+        LoggerUtils.logInfo("User Clicked on Search button");
+        Actions.enterText(By.id("primaryEmail"), "Surya@gmail.com");
+        Actions.enterText(By.id("secondaryEmail1"), "Surya@verinite.com");
+        Actions.selectDropdownByValue(By.id("mRMUser"), "checkeruser2");
+        Actions.selectDropdownByValue(By.id("delFrquency"), "SD");
+        Actions.clickUsingJS(By.xpath("//a[normalize-space(text())='Current Delivery Details']"));
+        Actions.clickVisibleCloseButtonUsingJS();
+        Actions.clickUsingJS(By.xpath("//div[@class='pemailmargin']//a[normalize-space(text())='Email Linkage Details']"));
+        Actions.clickVisibleCloseButtonUsingJS();
+        Actions.clickUsingJS(By.xpath("//div[@class='secondaryemailmargin']//a[normalize-space(text())='Email Linkage Details']"));
+        Actions.clickVisibleCloseButtonUsingJS();
+        Actions.clickUsingJS(By.xpath("//input[@type='submit' and @value='Submit']"));
+        Actions.assertElementDisplayed(By.xpath("//div[contains(@class, 'text-danger') and contains(normalize-space(.), 'Please select file')]"), "Please select file");
+        Actions.waitInSeconds(15);
     }
 }

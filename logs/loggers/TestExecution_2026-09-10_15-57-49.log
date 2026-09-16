@@ -1,0 +1,351 @@
+2026-09-10 15:57:50 [main] INFO  Utils - [TestNG] Running:
+  C:\Users\V00450\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+2026-09-10 15:57:50 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes wrong username in Login API ==========
+2026-09-10 15:57:51 [main] INFO  ExtentReportManager - ExtentReport initialized at: logs/reports/ExtentReport_10-09-2026_15-57-50.html
+2026-09-10 15:57:51 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes wrong username in Login API
+2026-09-10 15:57:51 [main] INFO  ExtentReportManager - API Test Started
+2026-09-10 15:57:51 [main] INFO  Hooks - API Test initialized
+2026-09-10 15:57:51 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-10 15:57:51 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-10 15:57:51 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "abc",
+  "password" : "Test@123"
+}
+2026-09-10 15:57:52 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-10 15:57:52 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-10 15:57:52 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-10 15:57:52 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes wrong username in Login API ==========
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "abc",
+  "password" : "Test@123"
+}</pre>
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes wrong username in Login API
+2026-09-10 15:57:52 [main] INFO  Hooks - API Test cleanup completed
+2026-09-10 15:57:52 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes blank username in Login API ==========
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes blank username in Login API
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - API Test Started
+2026-09-10 15:57:52 [main] INFO  Hooks - API Test initialized
+2026-09-10 15:57:52 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-10 15:57:52 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-10 15:57:52 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "",
+  "password" : "Test@123"
+}
+2026-09-10 15:57:52 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-10 15:57:52 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-10 15:57:52 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-10 15:57:52 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes blank username in Login API ==========
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "",
+  "password" : "Test@123"
+}</pre>
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes blank username in Login API
+2026-09-10 15:57:52 [main] INFO  Hooks - API Test cleanup completed
+2026-09-10 15:57:52 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes null username in Login API ==========
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes null username in Login API
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - API Test Started
+2026-09-10 15:57:52 [main] INFO  Hooks - API Test initialized
+2026-09-10 15:57:52 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-10 15:57:52 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-10 15:57:52 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : null,
+  "password" : "Test@123"
+}
+2026-09-10 15:57:52 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-10 15:57:52 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-10 15:57:52 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-10 15:57:52 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes null username in Login API ==========
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : null,
+  "password" : "Test@123"
+}</pre>
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes null username in Login API
+2026-09-10 15:57:52 [main] INFO  Hooks - API Test cleanup completed
+2026-09-10 15:57:52 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes wrong password in Login API ==========
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes wrong password in Login API
+2026-09-10 15:57:52 [main] INFO  ExtentReportManager - API Test Started
+2026-09-10 15:57:52 [main] INFO  Hooks - API Test initialized
+2026-09-10 15:57:52 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-10 15:57:52 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-10 15:57:52 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "testuser",
+  "password" : "abc"
+}
+2026-09-10 15:57:52 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-10 15:57:52 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-10 15:57:52 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-10 15:57:53 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes wrong password in Login API ==========
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "testuser",
+  "password" : "abc"
+}</pre>
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes wrong password in Login API
+2026-09-10 15:57:53 [main] INFO  Hooks - API Test cleanup completed
+2026-09-10 15:57:53 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes blank password in Login API ==========
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes blank password in Login API
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - API Test Started
+2026-09-10 15:57:53 [main] INFO  Hooks - API Test initialized
+2026-09-10 15:57:53 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-10 15:57:53 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-10 15:57:53 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "testuser",
+  "password" : ""
+}
+2026-09-10 15:57:53 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-10 15:57:53 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-10 15:57:53 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-10 15:57:53 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes blank password in Login API ==========
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "testuser",
+  "password" : ""
+}</pre>
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes blank password in Login API
+2026-09-10 15:57:53 [main] INFO  Hooks - API Test cleanup completed
+2026-09-10 15:57:53 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes null password in Login API` ==========
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes null password in Login API`
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - API Test Started
+2026-09-10 15:57:53 [main] INFO  Hooks - API Test initialized
+2026-09-10 15:57:53 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-10 15:57:53 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-10 15:57:53 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : null,
+  "password" : "Test@123"
+}
+2026-09-10 15:57:53 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-10 15:57:53 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-10 15:57:53 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-10 15:57:53 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes null password in Login API` ==========
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : null,
+  "password" : "Test@123"
+}</pre>
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes null password in Login API`
+2026-09-10 15:57:53 [main] INFO  Hooks - API Test cleanup completed
+2026-09-10 15:57:53 [main] INFO  Hooks - ========== API Test Started: User Passes valid Username and Password in the Login API ==========
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - Test created in ExtentReport: User Passes valid Username and Password in the Login API
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - API Test Started
+2026-09-10 15:57:53 [main] INFO  Hooks - API Test initialized
+2026-09-10 15:57:53 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-10 15:57:53 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-10 15:57:53 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "testuser",
+  "password" : "Test@123"
+}
+2026-09-10 15:57:53 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-10 15:57:53 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-10 15:57:53 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": 0,
+    "message": "Valid user",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoib21zX21ybV91c2VyIiwibmFtZSI6InRlc3R1c2VyIiwiaXNUcnVzdGVkIjp0cnVlLCJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTc4OTAzNjA3MywiZXhwIjoxNzg5MDU0MDczfQ.8GFgZk-58dYcRGZyDWe97W9clKBbmWCyG6eawMlcvmFbmlD_7A7N0AnsQ8wTG4knq7cgC-8KHTOgh8sihVWrEg",
+    "tokenExpireTime": "2026-09-10T15:27:53.000Z"
+}
+2026-09-10 15:57:53 [main] INFO  Hooks - ========== API Test Finished: User Passes valid Username and Password in the Login API ==========
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "testuser",
+  "password" : "Test@123"
+}</pre>
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": 0,
+    "message": "Valid user",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoib21zX21ybV91c2VyIiwibmFtZSI6InRlc3R1c2VyIiwiaXNUcnVzdGVkIjp0cnVlLCJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTc4OTAzNjA3MywiZXhwIjoxNzg5MDU0MDczfQ.8GFgZk-58dYcRGZyDWe97W9clKBbmWCyG6eawMlcvmFbmlD_7A7N0AnsQ8wTG4knq7cgC-8KHTOgh8sihVWrEg",
+    "tokenExpireTime": "2026-09-10T15:27:53.000Z"
+}</pre>
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - ✓ Test PASSED: User Passes valid Username and Password in the Login API
+2026-09-10 15:57:53 [main] INFO  Hooks - API Test cleanup completed
+2026-09-10 15:57:53 [main] INFO  Hooks - ========== UI Test Started: Verify VAT user is able to create New Case without clicking Current Delivery Details in TAX Invoice Delivery ==========
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify VAT user is able to create New Case without clicking Current Delivery Details in TAX Invoice Delivery
+2026-09-10 15:57:53 [main] INFO  ExtentReportManager - Test Started
+2026-09-10 15:57:53 [main] INFO  WebDriverManager - Using chromedriver 152.0.7977.82 (resolved driver for Chrome 152)
+2026-09-10 15:57:53 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\V00450\.cache\selenium\chromedriver\win64\152.0.7977.82\chromedriver.exe
+2026-09-10 15:57:55 [main] INFO  WebDriverManagerUtil - Browser initialized: chrome
+2026-09-10 15:57:55 [main] INFO  Hooks - Browser initialized
+2026-09-10 15:57:55 [main] INFO  ExtentReportManager - ✓ Browser initialized successfully
+2026-09-10 15:57:59 [main] INFO  WebDriverManagerUtil - Navigated to: http://localhost:4200
+2026-09-10 15:57:59 [main] INFO  VatStepdef - Navigated to VAT Portal
+2026-09-10 15:57:59 [main] INFO  VatStepdef - User Clicked on Create New Case+ link
+2026-09-10 15:57:59 [main] INFO  VatStepdef - User Selected VAT Country
+2026-09-10 15:57:59 [main] INFO  VatStepdef - User Entered VAT Number
+2026-09-10 15:57:59 [main] INFO  VatStepdef - User Clicked on Search button
+2026-09-10 15:57:59 [main] INFO  Actions - ✓ Current Delivery Details Must be Clicked Message displayed
+2026-09-10 15:57:59 [main] INFO  ExtentReportManager - ✓ ✓ Current Delivery Details Must be Clicked Message displayed
+2026-09-10 15:57:59 [main] INFO  VatStepdef - User is able to view the error message for Current Delivery Details fields in the create new case form
+2026-09-10 15:57:59 [main] INFO  Hooks - ========== UI Test Finished: Verify VAT user is able to create New Case without clicking Current Delivery Details in TAX Invoice Delivery ==========
+2026-09-10 15:57:59 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify VAT user is able to create New Case without clicking Current Delivery Details in TAX Invoice Delivery
+2026-09-10 15:57:59 [main] INFO  WebDriverManagerUtil - Browser closed and ThreadLocal cleared.
+2026-09-10 15:57:59 [main] INFO  Hooks - Browser closed
+2026-09-10 15:57:59 [main] INFO  Hooks - ========== UI Test Started: Verify VAT user is able to create New Case without clicking Primary Email Linkage Details in TAX Invoice Delivery ==========
+2026-09-10 15:57:59 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify VAT user is able to create New Case without clicking Primary Email Linkage Details in TAX Invoice Delivery
+2026-09-10 15:57:59 [main] INFO  ExtentReportManager - Test Started
+2026-09-10 15:57:59 [main] INFO  WebDriverManager - Using chromedriver 152.0.7977.82 (resolved driver for Chrome 152)
+2026-09-10 15:57:59 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\V00450\.cache\selenium\chromedriver\win64\152.0.7977.82\chromedriver.exe
+2026-09-10 15:58:01 [main] INFO  WebDriverManagerUtil - Browser initialized: chrome
+2026-09-10 15:58:01 [main] INFO  Hooks - Browser initialized
+2026-09-10 15:58:01 [main] INFO  ExtentReportManager - ✓ Browser initialized successfully
+2026-09-10 15:58:04 [main] INFO  WebDriverManagerUtil - Navigated to: http://localhost:4200
+2026-09-10 15:58:04 [main] INFO  VatStepdef - Navigated to VAT Portal
+2026-09-10 15:58:04 [main] INFO  VatStepdef - User Clicked on Create New Case+ link
+2026-09-10 15:58:04 [main] INFO  VatStepdef - User Selected VAT Country
+2026-09-10 15:58:04 [main] INFO  VatStepdef - User Entered VAT Number
+2026-09-10 15:58:04 [main] INFO  VatStepdef - User Clicked on Search button
+2026-09-10 15:58:04 [main] INFO  Actions - ✓ Email Linkage Details Must be Clicked Message displayed
+2026-09-10 15:58:04 [main] INFO  ExtentReportManager - ✓ ✓ Email Linkage Details Must be Clicked Message displayed
+2026-09-10 15:58:04 [main] INFO  VatStepdef - User is able to view the error message for Primary Email Linkage Details fields in the create new case form
+2026-09-10 15:58:04 [main] INFO  Hooks - ========== UI Test Finished: Verify VAT user is able to create New Case without clicking Primary Email Linkage Details in TAX Invoice Delivery ==========
+2026-09-10 15:58:04 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify VAT user is able to create New Case without clicking Primary Email Linkage Details in TAX Invoice Delivery
+2026-09-10 15:58:05 [main] INFO  WebDriverManagerUtil - Browser closed and ThreadLocal cleared.
+2026-09-10 15:58:05 [main] INFO  Hooks - Browser closed
+2026-09-10 15:58:05 [main] INFO  Hooks - ========== UI Test Started: Verify VAT user is able to create New Case without clicking Secondary Email Linkage Details in  TAX Invoice Delivery ==========
+2026-09-10 15:58:05 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify VAT user is able to create New Case without clicking Secondary Email Linkage Details in  TAX Invoice Delivery
+2026-09-10 15:58:05 [main] INFO  ExtentReportManager - Test Started
+2026-09-10 15:58:05 [main] INFO  WebDriverManager - Using chromedriver 152.0.7977.82 (resolved driver for Chrome 152)
+2026-09-10 15:58:05 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\V00450\.cache\selenium\chromedriver\win64\152.0.7977.82\chromedriver.exe
+2026-09-10 15:58:06 [main] INFO  WebDriverManagerUtil - Browser initialized: chrome
+2026-09-10 15:58:06 [main] INFO  Hooks - Browser initialized
+2026-09-10 15:58:06 [main] INFO  ExtentReportManager - ✓ Browser initialized successfully
+2026-09-10 15:58:09 [main] INFO  WebDriverManagerUtil - Navigated to: http://localhost:4200
+2026-09-10 15:58:09 [main] INFO  VatStepdef - Navigated to VAT Portal
+2026-09-10 15:58:09 [main] INFO  VatStepdef - User Clicked on Create New Case+ link
+2026-09-10 15:58:09 [main] INFO  VatStepdef - User Selected VAT Country
+2026-09-10 15:58:09 [main] INFO  VatStepdef - User Entered VAT Number
+2026-09-10 15:58:10 [main] INFO  VatStepdef - User Clicked on Search button
+2026-09-10 15:58:10 [main] INFO  Actions - ✓ Email Linkage Details Must be Clicked Message displayed
+2026-09-10 15:58:10 [main] INFO  ExtentReportManager - ✓ ✓ Email Linkage Details Must be Clicked Message displayed
+2026-09-10 15:58:10 [main] INFO  VatStepdef - User is able to view the error message for Secondary Email Linkage Details fields in the create new case form
+2026-09-10 15:58:10 [main] INFO  Hooks - ========== UI Test Finished: Verify VAT user is able to create New Case without clicking Secondary Email Linkage Details in  TAX Invoice Delivery ==========
+2026-09-10 15:58:10 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify VAT user is able to create New Case without clicking Secondary Email Linkage Details in  TAX Invoice Delivery
+2026-09-10 15:58:10 [main] INFO  WebDriverManagerUtil - Browser closed and ThreadLocal cleared.
+2026-09-10 15:58:10 [main] INFO  Hooks - Browser closed
+2026-09-10 15:58:10 [main] INFO  Hooks - ========== UI Test Started: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance ==========
+2026-09-10 15:58:10 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance
+2026-09-10 15:58:10 [main] INFO  ExtentReportManager - Test Started
+2026-09-10 15:58:10 [main] INFO  WebDriverManager - Using chromedriver 152.0.7977.82 (resolved driver for Chrome 152)
+2026-09-10 15:58:10 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\V00450\.cache\selenium\chromedriver\win64\152.0.7977.82\chromedriver.exe
+2026-09-10 15:58:12 [main] INFO  WebDriverManagerUtil - Browser initialized: chrome
+2026-09-10 15:58:12 [main] INFO  Hooks - Browser initialized
+2026-09-10 15:58:12 [main] INFO  ExtentReportManager - ✓ Browser initialized successfully
+2026-09-10 15:58:15 [main] INFO  WebDriverManagerUtil - Navigated to: http://localhost:4200
+2026-09-10 15:58:15 [main] INFO  VatStepdef - Navigated to VAT Portal
+2026-09-10 15:58:15 [main] INFO  VatStepdef - User Clicked on Create New Case+ link
+2026-09-10 15:58:15 [main] INFO  VatStepdef - User Selected VAT Country
+2026-09-10 15:58:15 [main] INFO  VatStepdef - User Entered VAT Number
+2026-09-10 15:58:15 [main] INFO  VatStepdef - User Clicked on Search button
+2026-09-10 15:58:16 [main] INFO  Actions - ✓ File uploaded Successfully
+2026-09-10 15:58:16 [main] INFO  ExtentReportManager - ✓ ✓ File uploaded Successfully
+2026-09-10 15:58:16 [main] INFO  Actions - ✓ File uploaded successfully Message displayed
+2026-09-10 15:58:16 [main] INFO  ExtentReportManager - ✓ ✓ File uploaded successfully Message displayed
+2026-09-10 15:58:16 [main] INFO  Actions - ✓ Success message verified: VAT Invoice Case Ref No : CASE-004 updated successfully
+2026-09-10 15:58:16 [main] INFO  ExtentReportManager - ✓ ✓ Success message verified: VAT Invoice Case Ref No : CASE-004 updated successfully
+2026-09-10 15:58:16 [main] INFO  VatStepdef - User is able to view the confirmation message after submitting the create new case
+2026-09-10 15:58:16 [main] INFO  Hooks - ========== UI Test Finished: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance ==========
+2026-09-10 15:58:16 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance
+2026-09-10 15:58:16 [main] INFO  WebDriverManagerUtil - Browser closed and ThreadLocal cleared.
+2026-09-10 15:58:16 [main] INFO  Hooks - Browser closed

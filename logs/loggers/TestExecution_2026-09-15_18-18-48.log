@@ -1,0 +1,38 @@
+2026-09-15 18:18:48 [main] INFO  Hooks - ========== API Test Started: User Passes valid Username and Password in the Login API ==========
+2026-09-15 18:18:48 [main] INFO  ExtentReportManager - ExtentReport initialized at: logs/reports/ExtentReport_15-09-2026_18-18-48.html
+2026-09-15 18:18:48 [main] INFO  ExtentReportManager - Test created in ExtentReport: User Passes valid Username and Password in the Login API
+2026-09-15 18:18:48 [main] INFO  ExtentReportManager - API Test Started
+2026-09-15 18:18:48 [main] INFO  Hooks - API Test initialized
+2026-09-15 18:18:49 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-15 18:18:49 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-15 18:18:49 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "testuser",
+  "password" : "Test@123"
+}
+2026-09-15 18:18:50 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-15 18:18:50 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-15 18:18:50 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": 0,
+    "message": "Valid user",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoib21zX21ybV91c2VyIiwibmFtZSI6InRlc3R1c2VyIiwiaXNUcnVzdGVkIjp0cnVlLCJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTc4OTQ3NjUzMCwiZXhwIjoxNzg5NDk0NTMwfQ.0mT-RX7jP4XPTcxTeUh_ebtB_oGVlUTdqOVHaks7utF4s0_rj3j2nyIQV8zdPGNosfgv5woh0-1aP8VPhmX9AA",
+    "tokenExpireTime": "2026-09-15T17:48:50.000Z"
+}
+2026-09-15 18:18:51 [main] INFO  Hooks - ========== API Test Finished: User Passes valid Username and Password in the Login API ==========
+2026-09-15 18:18:51 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-15 18:18:51 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "testuser",
+  "password" : "Test@123"
+}</pre>
+2026-09-15 18:18:51 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-15 18:18:51 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": 0,
+    "message": "Valid user",
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoib21zX21ybV91c2VyIiwibmFtZSI6InRlc3R1c2VyIiwiaXNUcnVzdGVkIjp0cnVlLCJzdWIiOiJ0ZXN0dXNlciIsImlhdCI6MTc4OTQ3NjUzMCwiZXhwIjoxNzg5NDk0NTMwfQ.0mT-RX7jP4XPTcxTeUh_ebtB_oGVlUTdqOVHaks7utF4s0_rj3j2nyIQV8zdPGNosfgv5woh0-1aP8VPhmX9AA",
+    "tokenExpireTime": "2026-09-15T17:48:50.000Z"
+}</pre>
+2026-09-15 18:18:51 [main] INFO  ExtentReportManager - ✓ Test PASSED: User Passes valid Username and Password in the Login API
+2026-09-15 18:18:51 [main] INFO  Hooks - API Test cleanup completed

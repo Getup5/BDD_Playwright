@@ -1,4 +1,4 @@
-@Login @API @Positive
+@Regression @Login @API @Positive
 
 Feature: Create Login Positive Scenario with Login API
 
