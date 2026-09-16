@@ -89,6 +89,13 @@
             <version>${selenium.version}</version>
         </dependency>
 
+        <!-- PLAYWRIGHT -->
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+            <version>1.52.0</version>
+        </dependency>
+
         <!-- WEBDRIVER MANAGER -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
