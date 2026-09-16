@@ -1,0 +1,284 @@
+2026-09-17 01:10:05 [main] INFO  Utils - [TestNG] Running:
+  C:\Users\V00450\AppData\Local\JetBrains\IdeaIC2025.2\temp-testng-customsuite.xml
+
+2026-09-17 01:10:05 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes wrong username in Login API ==========
+2026-09-17 01:10:06 [main] INFO  ExtentReportManager - ExtentReport initialized at: logs/reports/ExtentReport_17-09-2026_01-10-05.html
+2026-09-17 01:10:06 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes wrong username in Login API
+2026-09-17 01:10:06 [main] INFO  ExtentReportManager - API Test Started
+2026-09-17 01:10:06 [main] INFO  Hooks - API Test initialized
+2026-09-17 01:10:06 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-17 01:10:06 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-17 01:10:06 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "abc",
+  "password" : "Test@123"
+}
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-17 01:10:07 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes wrong username in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "abc",
+  "password" : "Test@123"
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes wrong username in Login API
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test cleanup completed
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes blank username in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes blank username in Login API
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - API Test Started
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test initialized
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "",
+  "password" : "Test@123"
+}
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-17 01:10:07 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes blank username in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "",
+  "password" : "Test@123"
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes blank username in Login API
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test cleanup completed
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes null username in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes null username in Login API
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - API Test Started
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test initialized
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : null,
+  "password" : "Test@123"
+}
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-17 01:10:07 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes null username in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : null,
+  "password" : "Test@123"
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes null username in Login API
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test cleanup completed
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes wrong password in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes wrong password in Login API
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - API Test Started
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test initialized
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "testuser",
+  "password" : "abc"
+}
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-17 01:10:07 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes wrong password in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "testuser",
+  "password" : "abc"
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes wrong password in Login API
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test cleanup completed
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes blank password in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes blank password in Login API
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - API Test Started
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test initialized
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "testuser",
+  "password" : ""
+}
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-17 01:10:07 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes blank password in Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "testuser",
+  "password" : ""
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes blank password in Login API
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test cleanup completed
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Started: Verify login is rejected when user passes null password in Login API` ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - Test created in ExtentReport: Verify login is rejected when user passes null password in Login API`
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - API Test Started
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test initialized
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : null,
+  "password" : "Test@123"
+}
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-17 01:10:07 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Finished: Verify login is rejected when user passes null password in Login API` ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : null,
+  "password" : "Test@123"
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify login is rejected when user passes null password in Login API`
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test cleanup completed
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Started: User Passes valid Username and Password in the Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - Test created in ExtentReport: User Passes valid Username and Password in the Login API
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - API Test Started
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test initialized
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API REQUEST ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - URL : http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ApiHelper - REQUEST BODY : 
+{
+  "username" : "testuser",
+  "password" : "Test@123"
+}
+2026-09-17 01:10:07 [main] INFO  ApiHelper - 
+========== API RESPONSE ==========
+2026-09-17 01:10:07 [main] INFO  ApiHelper - STATUS CODE : 200
+2026-09-17 01:10:07 [main] INFO  ApiHelper - RESPONSE BODY : 
+{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== API Test Finished: User Passes valid Username and Password in the Login API ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST URL:</b> http://localhost:9095/api/v1/login
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>REQUEST BODY:</b> <pre>{
+  "username" : "testuser",
+  "password" : "Test@123"
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE STATUS CODE:</b> 200
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - <b>RESPONSE BODY:</b> <pre>{
+    "code": -1,
+    "message": "Invalid credentials or user does not exist.",
+    "token": null,
+    "tokenExpireTime": null
+}</pre>
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - ✗ Test FAILED: User Passes valid Username and Password in the Login API
+2026-09-17 01:10:07 [main] INFO  Hooks - API Test cleanup completed
+2026-09-17 01:10:07 [main] INFO  Hooks - ========== UI Test Started: User opens UI and performs login flow ==========
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - Test created in ExtentReport: User opens UI and performs login flow
+2026-09-17 01:10:07 [main] INFO  ExtentReportManager - Test Started
+2026-09-17 01:10:11 [main] INFO  Hooks - Browser initialized
+2026-09-17 01:10:11 [main] INFO  ExtentReportManager - ✓ Browser initialized successfully
+2026-09-17 01:10:12 [main] INFO  Actions - Opened URL: http://localhost:4200
+2026-09-17 01:10:12 [main] INFO  Actions - Selected option by value
+2026-09-17 01:10:12 [main] INFO  Actions - Value filled
+2026-09-17 01:10:12 [main] INFO  Actions - Value filled
+2026-09-17 01:10:12 [main] INFO  Actions - Value filled
+2026-09-17 01:10:12 [main] INFO  Actions - Clicked element
+2026-09-17 01:10:12 [main] INFO  Actions - Clicked element
+2026-09-17 01:10:12 [main] INFO  Actions - Uploaded file
+2026-09-17 01:10:12 [main] INFO  Actions - Clicked element
+2026-09-17 01:10:12 [main] INFO  ExtentReportManager - ✓ Assert Text Contains: expectedSubstring='File uploaded successfully', actual=' File uploaded successfully '
+2026-09-17 01:10:12 [main] INFO  Actions - Selected option by value
+2026-09-17 01:10:12 [main] INFO  Actions - Clicked element
+2026-09-17 01:10:12 [main] INFO  ExtentReportManager - ✓ Assert Text Contains: expectedSubstring='updated successfully', actual=' VAT Invoice Case Ref No : CASE-004 updated successfully '
+2026-09-17 01:10:12 [main] INFO  Hooks - ========== UI Test Finished: User opens UI and performs login flow ==========
+2026-09-17 01:10:12 [main] INFO  ExtentReportManager - ✓ Test PASSED: User opens UI and performs login flow
+2026-09-17 01:10:13 [main] INFO  Hooks - Browser closed

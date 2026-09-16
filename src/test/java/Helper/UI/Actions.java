@@ -58,73 +58,78 @@ public class Actions {
 
     public void click(Locator locator) {
         locator.click();
-        LoggerUtils.logInfo("Clicked: " + locator);
+        LoggerUtils.logInfo("Clicked element");
     }
 
     public void doubleClick(Locator locator) {
         locator.dblclick();
-        LoggerUtils.logInfo("Double-clicked: " + locator);
+        LoggerUtils.logInfo("Double-clicked element");
     }
 
     public void fill(Locator locator, String value) {
         locator.fill(value);
-        LoggerUtils.logInfo("Filled value into: " + locator);
+        LoggerUtils.logInfo("Value filled");
     }
 
     public void typeSlowly(Locator locator, String value) {
         locator.pressSequentially(value);
-        LoggerUtils.logInfo("Typed (key-by-key) into: " + locator);
+        LoggerUtils.logInfo("Typed value");
     }
 
     public void clear(Locator locator) {
         locator.clear();
-        LoggerUtils.logInfo("Cleared: " + locator);
+        LoggerUtils.logInfo("Cleared element");
     }
 
     //Radio button
     public void check(Locator locator) {
         locator.check();
         locator.getByRole(AriaRole.RADIO).check();
-        LoggerUtils.logInfo("Checked: " + locator);
+        LoggerUtils.logInfo("Checked element");
     }
 
     public void uncheck(Locator locator) {
         locator.uncheck();
-        LoggerUtils.logInfo("Unchecked: " + locator);
+        LoggerUtils.logInfo("Unchecked element");
     }
 
     public void selectByLabel(Locator locator, String visibleOptionText) {
         locator.selectOption(new SelectOption().setLabel(visibleOptionText));
-        LoggerUtils.logInfo("Selected option (by label) '" + visibleOptionText + "' on: " + locator);
+        LoggerUtils.logInfo("Selected option by label");
     }
 
     public void selectByValue(Locator locator, String optionValue) {
         locator.selectOption(new SelectOption().setValue(optionValue));
-        LoggerUtils.logInfo("Selected option (by value) '" + optionValue + "' on: " + locator);
+        LoggerUtils.logInfo("Selected option by value");
     }
 
     public void hover(Locator locator) {
         locator.hover();
-        LoggerUtils.logInfo("Hovered: " + locator);
+        LoggerUtils.logInfo("Hovered over element");
+    }
+
+    public void pageWait(int seconds) {
+        page.waitForTimeout(seconds * 1000L);
+        LoggerUtils.logInfo("Waited for " + seconds + " seconds");
     }
 
     public void pressKey(Locator locator, String key) {
         locator.press(key);
-        LoggerUtils.logInfo("Pressed key '" + key + "' on: " + locator);
+        LoggerUtils.logInfo("Pressed key");
     }
 
     public void dragAndDrop(Locator source, Locator target) {
         source.dragTo(target);
-        LoggerUtils.logInfo("Dragged " + source + " onto " + target);
+        LoggerUtils.logInfo("Dragged and dropped element");
     }
 
     public void uploadFile(Locator locator, String filePath) {
         locator.setInputFiles(Paths.get(filePath));
-        LoggerUtils.logInfo("Uploaded file '" + filePath + "' to: " + locator);
+        LoggerUtils.logInfo("Uploaded file");
     }
 
     // =========================================================================
-    // READ VALUES (no assertion — just returns current state)
+    // READ VALUES (no assertion ï¿½ just returns current state)
     // =========================================================================
 
     public String getText(Locator locator) {
@@ -136,7 +141,7 @@ public class Actions {
     }
 
     // =========================================================================
-    // VERIFY SOMETHING (all auto-retrying — safe against timing/loading issues)
+    // VERIFY SOMETHING (all auto-retrying ï¿½ safe against timing/loading issues)
     // =========================================================================
 
     public void assertVisible(Locator locator) {

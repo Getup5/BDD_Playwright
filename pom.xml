@@ -17,7 +17,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <cucumber.version>7.34.4</cucumber.version>
-        <selenium.version>4.46.0</selenium.version>
         <lombok.version>1.18.46</lombok.version>
 
     </properties>
@@ -82,25 +81,11 @@
             <version>2.20.0</version>
         </dependency>
 
-        <!-- SELENIUM -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
-
         <!-- PLAYWRIGHT -->
         <dependency>
             <groupId>com.microsoft.playwright</groupId>
             <artifactId>playwright</artifactId>
             <version>1.52.0</version>
-        </dependency>
-
-        <!-- WEBDRIVER MANAGER -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>6.3.4</version>
         </dependency>
 
         <!-- LOGGING -->
@@ -180,8 +165,7 @@
 
                     <includes>
 
-                        <include>**/TestRunner.java</include>
-                        <include>**/AllRunners/*.java</include>
+                        <include>**/AllRunners/AllTestRunner.java</include>
 
                     </includes>
 

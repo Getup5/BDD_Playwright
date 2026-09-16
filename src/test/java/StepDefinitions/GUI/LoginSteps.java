@@ -53,7 +53,7 @@ public class LoginSteps {
         Actions.getByRole(AriaRole.BUTTON, "Close").click();
         Actions.click(Actions.getByCss(".pemailmargin a"));
         Actions.click(Actions.getByCss(".secondaryemailmargin a"));
-        Actions.uploadFile(Actions.getById("inpFileUpload"), "src/test/resources/TestFiles/File-1.pdf");
+        Actions.uploadFile(Actions.getById("inpFileUpload"), "src/test/resources/TestFiles/File-51kb.pdf");
         Actions.click(Actions.getByRole(AriaRole.BUTTON, "Upload file"));
         Actions.assertTextContains(Actions.getByCss(".alert-success"), "File uploaded successfully");
         Actions.selectByValue(Actions.getById("mRMUser"), "checkeruser2");

@@ -1,11 +1,11 @@
 package StepDefinitions.GUI;
 
 import Utils.ExtentReportManager;
+import Utils.LoggerUtils;
+import Utils.PlaywrightManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import Utils.LoggerUtils;
-import Utils.WebDriverManagerUtil;
 
 public class Hooks {
 
@@ -17,7 +17,7 @@ public class Hooks {
         ExtentReportManager.createTest(scenario.getName(), "Tags: " + scenario.getSourceTagNames());
         ExtentReportManager.logInfo("Test Started");
 
-        WebDriverManagerUtil.getDriver();
+        PlaywrightManager.startScenario();
         LoggerUtils.logInfo("Browser initialized");
         ExtentReportManager.logPass("Browser initialized successfully");
     }
@@ -28,9 +28,7 @@ public class Hooks {
 
         if (scenario.isFailed()) {
             try {
-                byte[] screenshot = ((org.openqa.selenium.TakesScreenshot)
-                        WebDriverManagerUtil.getDriver())
-                        .getScreenshotAs(org.openqa.selenium.OutputType.BYTES);
+                byte[] screenshot = PlaywrightManager.takeScreenshot();
                 scenario.attach(screenshot, "image/png", "Failure Screenshot");
                 if (ExtentReportManager.getTest() != null) {
                     String base64 = java.util.Base64.getEncoder().encodeToString(screenshot);
@@ -44,7 +42,8 @@ public class Hooks {
         } else {
             ExtentReportManager.logPass("Test PASSED: " + scenario.getName());
         }
-        WebDriverManagerUtil.quitDriver();
+
+        PlaywrightManager.stopScenario();
         LoggerUtils.logInfo("Browser closed");
         ExtentReportManager.cleanup();
     }

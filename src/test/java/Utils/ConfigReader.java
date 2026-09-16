@@ -21,7 +21,7 @@ public class ConfigReader {
                     try (FileInputStream fis = new FileInputStream(file)) {
                         properties.load(fis);
                     }
-                    return;
+                    break;
                 }
             } catch (Exception e) {
                 e.printStackTrace();

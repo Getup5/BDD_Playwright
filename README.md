@@ -1,6 +1,6 @@
 # CucumberFramework
 
-A Hybrid Test Automation Framework built with **Java**, **Cucumber BDD**, **Selenium**, and **RestAssured** — covering both UI (Web) and API test automation for the application suite
+A Hybrid Test Automation Framework built with **Java**, **Cucumber BDD**, **Playwright**, and **RestAssured** — covering both UI (Web) and API test automation for the application suite
 
 ---
 
@@ -10,7 +10,7 @@ A Hybrid Test Automation Framework built with **Java**, **Cucumber BDD**, **Sele
 |---|--------------------------------------------|
 | Language | Java 21 (LTS)                              |
 | BDD Framework | Cucumber 7.34.4 (Gherkin)                  |
-| UI Automation | Selenium 4.46 + WebDriverManager 6.3.4     |
+| UI Automation | Playwright 1.52.0                               |
 | API Automation | RestAssured 5.5.7                          |
 | Test Runner | TestNG 7.12.0                               |
 | Reporting | ExtentReports 5.1.2 (HTML)                 |
@@ -60,7 +60,7 @@ A Hybrid Test Automation Framework built with **Java**, **Cucumber BDD**, **Sele
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │           TestContext.java — PicoContainer DI                   │
-│   WebDriver · dataStore · API response · shared state           │
+│   Playwright page · dataStore · API response · shared state     │
 │         injected into ALL step definition classes               │
 └─────────────────────────────────────────────────────────────────┘
                               │
@@ -93,7 +93,7 @@ CucumberFramework/
 │   │   │   ├── Api/
 │   │   │   │   └── ApiHelper.java              # REST API helper (GET,POST,PUT,DELETE,PATCH)
 │   │   │   └── UI/
-│   │   │       └── UiHelper.java               # Selenium UI helper (click, type, assert, upload)
+│   │   │       └── UiHelper.java               # Playwright UI helper (click, type, assert, upload)
 │   │   ├── AllRunners/
 │   │   │   ├── ApiTestRunner.java              # Runs @API tagged scenarios only
 │   │   │   └── UITestRunner.java               # Runs @UI tagged scenarios only
@@ -110,7 +110,7 @@ CucumberFramework/
 │   │   │   └── TestListener.java               # TestNG listener for ExtentReport
 │   │   └── Utils/
 │   │       ├── ConfigReader.java               # Reads config.properties
-│   │       ├── WebDriverManagerUtil.java       # ThreadLocal WebDriver management
+│   │       ├── PlaywrightManager.java           # Shared Playwright browser lifecycle
 │   │       ├── ExtentReportManager.java        # HTML report generation
 │   │       ├── FileUtils.java                  # JSON template loader & updater
 │   │       ├── ResponseUtils.java              # API response assertions & storage
