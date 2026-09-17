@@ -1,0 +1,22 @@
+2026-09-17 17:35:55 [main] INFO  Hooks - ========== UI Test Started: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance ==========
+2026-09-17 17:35:55 [main] INFO  ExtentReportManager - ExtentReport initialized at: logs/reports/ExtentReport_17-09-2026_17-35-55.html
+2026-09-17 17:35:55 [main] INFO  ExtentReportManager - Test created in ExtentReport: 🎭 UI | Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance
+2026-09-17 17:35:55 [main] INFO  ExtentReportManager - Test Started
+2026-09-17 17:36:02 [main] INFO  Hooks - Browser initialized
+2026-09-17 17:36:02 [main] INFO  ExtentReportManager - ✓ Browser initialized successfully
+2026-09-17 17:36:05 [main] INFO  Actions - Opened URL: http://localhost:4200
+2026-09-17 17:36:05 [main] INFO  Actions - Selected option by value
+2026-09-17 17:36:05 [main] INFO  Actions - Value filled
+2026-09-17 17:36:06 [main] INFO  Actions - Value filled
+2026-09-17 17:36:06 [main] INFO  Actions - Value filled
+2026-09-17 17:36:06 [main] INFO  Actions - Clicked element
+2026-09-17 17:36:06 [main] INFO  Actions - Clicked element
+2026-09-17 17:36:06 [main] INFO  Actions - Uploaded file
+2026-09-17 17:36:06 [main] INFO  Actions - Clicked element
+2026-09-17 17:36:06 [main] INFO  ExtentReportManager - ✓ Assert Text Contains: expectedSubstring='File uploaded successfully', actual=' File uploaded successfully '
+2026-09-17 17:36:06 [main] INFO  Actions - Selected option by value
+2026-09-17 17:36:07 [main] INFO  Actions - Clicked element
+2026-09-17 17:36:07 [main] INFO  ExtentReportManager - ✓ Assert Text Contains: expectedSubstring='updated successfully', actual=' VAT Invoice Case Ref No : CASE-004 updated successfully '
+2026-09-17 17:36:07 [main] INFO  Hooks - ========== UI Test Finished: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance ==========
+2026-09-17 17:36:07 [main] INFO  ExtentReportManager - ✓ Test PASSED: Verify that VAT user is able to create New Case in TAX Invoice Delivery Maintenance
+2026-09-17 17:36:08 [main] INFO  Hooks - Browser closed

@@ -25,7 +25,7 @@ public class Hooks {
         LoggerUtils.logInfo("========== API Test Started: " + scenario.getName() + " ==========");
 
         ExtentReportManager.initializeExtentReports();
-        ExtentReportManager.createTest(scenario.getName(), "Tags: " + scenario.getSourceTagNames());
+        ExtentReportManager.createTest("⚙️ API | " + scenario.getName(), "Tags: " + scenario.getSourceTagNames());
         ExtentReportManager.logInfo("API Test Started");
         LoggerUtils.logInfo("API Test initialized");
     }
@@ -64,4 +64,3 @@ public class Hooks {
         LoggerUtils.clearContext();  // Clear MDC context
     }
 }
-

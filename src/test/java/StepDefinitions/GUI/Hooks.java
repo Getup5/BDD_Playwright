@@ -14,7 +14,7 @@ public class Hooks {
         LoggerUtils.logInfo("========== UI Test Started: " + scenario.getName() + " ==========");
 
         ExtentReportManager.initializeExtentReports();
-        ExtentReportManager.createTest(scenario.getName(), "Tags: " + scenario.getSourceTagNames());
+        ExtentReportManager.createTest("🎭 UI | " + scenario.getName(), "Tags: " + scenario.getSourceTagNames());
         ExtentReportManager.logInfo("Test Started");
 
         PlaywrightManager.startScenario();

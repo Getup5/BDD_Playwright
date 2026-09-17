@@ -58,6 +58,16 @@ public class ExtentReportManager {
         return extentTest.get();
     }
 
+    // ── Category tagging (powers the filter panel + detail-view badge) ───────
+
+    public static void assignCategory(String... categories) {
+        if (getTest() != null) {
+            for (String category : categories) {
+                getTest().assignCategory(category);
+            }
+        }
+    }
+
     public static void logInfo(String message) {
         if (getTest() != null) getTest().info(message);
         LoggerUtils.logInfo(message);
@@ -98,4 +108,3 @@ public class ExtentReportManager {
         extentTest.remove();
     }
 }
-
