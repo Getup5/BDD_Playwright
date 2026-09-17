@@ -1,6 +1,6 @@
 package StepDefinitions.API;
 
-import Helper.Api.ApiHelper;
+import Helper.API.ApiHelper;
 import Context.TestContext;
 import Utils.LoggerUtils;
 import io.cucumber.datatable.DataTable;

@@ -6,7 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = "src/test/resources/Features/API",
         glue = "StepDefinitions.API",
-        tags = "@Regression and not @WIP",
+        tags = "@API and not @WIP",
         objectFactory = io.cucumber.picocontainer.PicoFactory.class,
         plugin = {
                 "pretty",
